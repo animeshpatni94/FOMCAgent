@@ -1,0 +1,47 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# FOMC Benchmark Script Dependencies
+# ══════════════════════════════════════════════════════════════════════════════
+#
+# Python Version: 3.10+ required (tested with 3.11, 3.12)
+#   - Uses: from __future__ import annotations, dataclasses, typing
+#   - FAISS requires Python 3.8-3.12
+#
+# This requirements.txt is ONLY for scripts/benchmark.py (HNSW vs IVF comparison)
+# The main FOMC project is .NET/C# and does not require Python.
+#
+# ══════════════════════════════════════════════════════════════════════════════
+# Installation:
+#   cd scripts
+#   python -m venv venv
+#   .\venv\Scripts\activate      # Windows
+#   source venv/bin/activate     # Linux/Mac
+#   pip install -r requirements.txt
+#
+# Run benchmark:
+#   python benchmark.py
+# ══════════════════════════════════════════════════════════════════════════════
+
+# ── Vector Database Client ─────────────────────────────────────────────────────
+# Used to export vectors from Qdrant for FAISS comparison
+qdrant-client>=1.7.0
+
+# ── FAISS (Facebook AI Similarity Search) ──────────────────────────────────────
+# Core library for HNSW vs IVF benchmarking
+# Use faiss-cpu for most systems; faiss-gpu if you have CUDA + GPU
+faiss-cpu>=1.7.4
+# faiss-gpu>=1.7.4  # Uncomment if you have NVIDIA GPU with CUDA
+
+# ── Azure OpenAI ───────────────────────────────────────────────────────────────
+# Used to generate query embeddings for benchmark
+openai>=1.0.0
+
+# ── Core Dependencies ──────────────────────────────────────────────────────────
+# NumPy: required by FAISS and for array operations
+numpy>=1.24.0
+
+# python-dotenv: load environment variables from .env file (optional)
+python-dotenv>=1.0.0
+
+# ── Standard Library (no install needed) ───────────────────────────────────────
+# These are used in benchmark.py but come with Python:
+#   - os, time, json, dataclasses, typing

@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/FOMC.Shared/FOMC.Shared.csproj" />
+    <Project Path="src/FOMC.Data/FOMC.Data.csproj" />
+    <Project Path="src/FOMC.McpServer/FOMC.McpServer.csproj" />
+    <Project Path="src/FOMC.Agent/FOMC.Agent.csproj" />
+  </Folder>
+</Solution>

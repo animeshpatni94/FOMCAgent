@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Azure OpenAI SDK (GA - officially supports Azure AI Foundry) -->
+    <PackageReference Include="Azure.AI.OpenAI" Version="2.2.0-beta.1" />
+    <!-- Qdrant vector database client (gRPC) -->
+    <PackageReference Include="Qdrant.Client" Version="1.12.0" />
+    <!-- HTML parsing for FOMC document ingestion -->
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.72" />
+    <!-- DI / config / logging abstractions -->
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="10.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="10.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="10.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="10.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FOMC.Shared\FOMC.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

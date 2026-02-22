@@ -1,0 +1,51 @@
+# Build artifacts
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+*.cache
+
+# IDE
+.vscode/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Python
+venv/
+.venv/
+env/
+*.py[cod]
+__pycache__/
+*.egg-info/
+dist/
+build/
+.Python
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# Temporary files
+*.tmp
+*.temp
+
+# Sensitive Configuration
+appsettings.json
+appsettings.*.json
+!appsettings.example.json
+.env
+.env.local
+secrets.json
+credentials.json

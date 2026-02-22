@@ -1,0 +1,44 @@
+log_level: INFO
+
+storage:
+  # Storage path for Qdrant data
+  storage_path: ./qdrant-data
+
+  # Snapshots storage path
+  snapshots_path: ./qdrant-data/snapshots
+
+  # Memory-mapped file configuration
+  on_disk_payload: true
+
+  # Performance tuning
+  optimizers:
+    deleted_threshold: 0.2
+    vacuum_min_vector_number: 1000
+    default_segment_number: 0
+    max_segment_size_kb: null
+    memmap_threshold_kb: null
+    indexing_threshold_kb: 20000
+    flush_interval_sec: 5
+    max_optimization_threads: 1
+
+  # Write-ahead log configuration
+  wal:
+    wal_capacity_mb: 32
+    wal_segments_ahead: 0
+
+service:
+  # HTTP API settings
+  host: 127.0.0.1
+  http_port: 6333
+  
+  # gRPC settings
+  grpc_port: 6334
+  
+  # Enable CORS for web access
+  enable_cors: true
+
+  # Maximum request size (in bytes)
+  max_request_size_mb: 32
+
+# Telemetry (optional - can be disabled)
+telemetry_disabled: true
